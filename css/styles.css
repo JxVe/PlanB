@@ -285,6 +285,100 @@ main{min-width:0}
 .site-footer .social a{color:var(--text-faint);transition:color .25s var(--ease)}
 .site-footer .social a:hover{color:var(--text)}
 
+/* ===== Animaciones y micro-interacciones ===== */
+
+/* --- Revelado al hacer scroll --- */
+.feature-card,
+.team-card,
+.grid-cards .card,
+.dj-card,
+.stat,
+.stats-about,
+.section .eyebrow,
+.section .section-title,
+.section .section-text{
+  opacity:0;
+  translate:0 26px;
+}
+.feature-card,
+.team-card,
+.grid-cards .card,
+.dj-card{
+  transition-property:opacity, translate, transform, box-shadow, border-color;
+  transition-duration:.7s, .7s, .4s, .4s, .4s;
+  transition-timing-function:var(--ease);
+  transition-delay:var(--reveal-delay, 0s), var(--reveal-delay, 0s), 0s, 0s, 0s;
+}
+.stat,
+.stats-about,
+.section .eyebrow,
+.section .section-title,
+.section .section-text{
+  transition:opacity .7s var(--ease), translate .7s var(--ease);
+  transition-delay:var(--reveal-delay, 0s);
+}
+.in-view{
+  opacity:1 !important;
+  translate:0 0 !important;
+}
+
+/* --- Hover: tarjetas --- */
+.feature-card:hover,
+.team-card:hover,
+.grid-cards .card:hover,
+.dj-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 16px 32px -20px rgba(0,0,0,.7);
+  border-color:var(--text-faint);
+}
+.feature-icon{transition:transform .35s var(--ease), border-color .35s var(--ease)}
+.feature-card:hover .feature-icon{transform:rotate(-8deg) scale(1.08);border-color:var(--text-faint)}
+
+.team-photo img{transition:transform .6s var(--ease)}
+.team-card:hover .team-photo img{transform:scale(1.06)}
+.team-photo .corner{transition:transform .35s var(--ease)}
+.team-card:hover .corner.tl{transform:translate(-3px,-3px)}
+.team-card:hover .corner.tr{transform:translate(3px,-3px)}
+.team-card:hover .corner.bl{transform:translate(-3px,3px)}
+.team-card:hover .corner.br{transform:translate(3px,3px)}
+
+.dj-card .avatar.round{transition:transform .35s var(--ease)}
+.dj-card:hover .avatar.round{transform:scale(1.08)}
+
+/* Placeholders sin foto (Alianzas / DJs): pulso sutil "próximamente" */
+.avatar{animation:avatarPulse 2.4s ease-in-out infinite}
+@keyframes avatarPulse{
+  0%,100%{opacity:1}
+  50%{opacity:.45}
+}
+
+/* --- Menú hamburguesa animado (usa aria-expanded, sin JS extra) --- */
+.nav-toggle span{transition:transform .3s var(--ease), opacity .3s var(--ease)}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0;transform:translateX(-6px)}
+.nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+/* --- Hero: entrada escalonada al cargar --- */
+.hero-copy .eyebrow{animation:heroUp .8s var(--ease) both;animation-delay:.05s}
+.headline .line{animation:heroUp .9s var(--ease) both}
+.headline .line:nth-child(1){animation-delay:.16s}
+.headline .line:nth-child(2){animation-delay:.28s}
+.lede{animation:heroUp .9s var(--ease) both;animation-delay:.42s}
+.hero-actions{animation:heroUp .9s var(--ease) both;animation-delay:.54s}
+.hero-events{animation:heroUp .9s var(--ease) both;animation-delay:.66s}
+
+@keyframes heroUp{
+  from{opacity:0;translate:0 16px}
+  to{opacity:1;translate:0 0}
+}
+
+/* Zoom lento y continuo en la imagen de fondo del hero */
+.hero-bg img{animation:heroZoom 22s ease-in-out infinite alternate}
+@keyframes heroZoom{
+  from{scale:1}
+  to{scale:1.08}
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 980px){
   .hero{min-height:520px}
