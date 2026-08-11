@@ -7,73 +7,146 @@
 <meta name="description" content="Plan B — un club nocturno de Roblox.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
 <div class="noise"></div>
 
-<header class="topbar">
-  <div class="brand">
-    <span class="brand-mark" aria-hidden="true">PB</span>
-    <span class="brand-name">Plan&nbsp;B</span>
-  </div>
-  <a class="credit" href="#" target="_blank" rel="noopener" data-tooltip="Jxxve Studios">By Jxxve</a>
-  <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-</header>
-
 <div class="layout">
 
   <aside class="sidenav" id="sidenav">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">PB</span>
+      <span class="brand-name">Plan&nbsp;B</span>
+      <a class="credit" href="#" target="_blank" rel="noopener" data-tooltip="Jxxve Studios">by Jxxve</a>
+    </div>
+
     <nav aria-label="Secciones">
       <ul>
-        <li><a href="#inicio" class="active">Inicio</a></li>
-        <li><a href="#equipo">Equipo</a></li>
-        <li><a href="#alianzas">Alianzas</a></li>
-        <li><a href="#djs">DJs</a></li>
-        <li><a href="#gamepasses">Gamepasses</a></li>
-        <li><a href="https://discord.gg/mpHhx4bsD3" target="_blank" rel="noopener" class="nav-reservas">Reservas</a></li>
+        <li><a href="#inicio" class="active">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 11.5L12 4l8 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10v9h12v-9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Inicio</span>
+        </a></li>
+        <li><a href="#equipo">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="9" cy="8.5" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M3.5 19c.6-3.4 2.8-5.3 5.5-5.3s4.9 1.9 5.5 5.3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="16.5" cy="9.5" r="2.3" stroke="currentColor" stroke-width="1.5"/><path d="M14.8 19c.4-2.5 1.8-3.9 3.7-3.9s3.4 1.4 3.8 3.9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <span>Equipo</span>
+        </a></li>
+        <li><a href="#alianzas">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.9 7.6-7 9-4.1-1.4-7-4.8-7-9V6l7-3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          <span>Alianzas</span>
+        </a></li>
+        <li><a href="#djs">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 13v-2a8 8 0 0116 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><rect x="3" y="13" width="4" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5" stroke="currentColor" stroke-width="1.5"/></svg>
+          <span>DJs</span>
+        </a></li>
+        <li><a href="#gamepasses">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l3 4.5h5L16.5 12 20 16.5h-5L12 21l-3-4.5H4L7.5 12 4 7.5h5L12 3z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+          <span>Gamepasses</span>
+        </a></li>
+        <li><a href="https://discord.gg/mpHhx4bsD3" target="_blank" rel="noopener" class="nav-reservas">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M4 9.5h16M8 3v3.5M16 3v3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <span>Reservas</span>
+        </a></li>
       </ul>
     </nav>
 
-    <div class="social social-icons" aria-label="Redes sociales">
-      <a href="https://discord.gg/mpHhx4bsD3" target="_blank" rel="noopener" data-tooltip="Comunidad de Roblox">
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="8.5" cy="9" r="3" stroke="currentColor" stroke-width="1.4"/><circle cx="16" cy="10.5" r="2.2" stroke="currentColor" stroke-width="1.4"/><path d="M2.5 19c.6-3.2 2.9-5 6-5s5.4 1.8 6 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M14 19c.4-2.3 1.9-3.6 4-3.6s3.4 1.3 3.8 3.6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-      </a>
-      <a href="https://www.instagram.com/sandeo_club" target="_blank" rel="noopener" data-tooltip="Instagram">
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></svg>
-      </a>
-      <a href="https://www.roblox.com/es/games/80903813914510/P-B" target="_blank" rel="noopener" data-tooltip="Roblox">
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.7 3.3l14 3.75-3.75 14-14-3.75 3.75-14z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M11.3 8.9l3.75 1 -1 3.75 -3.75-1z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>
-      </a>
+    <div class="sidenav-foot">
+      <p class="follow-label">Síguenos</p>
+      <div class="social social-icons" aria-label="Redes sociales">
+        <a href="https://discord.gg/mpHhx4bsD3" target="_blank" rel="noopener" data-tooltip="Comunidad de Roblox">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="8.5" cy="9" r="3" stroke="currentColor" stroke-width="1.4"/><circle cx="16" cy="10.5" r="2.2" stroke="currentColor" stroke-width="1.4"/><path d="M2.5 19c.6-3.2 2.9-5 6-5s5.4 1.8 6 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M14 19c.4-2.3 1.9-3.6 4-3.6s3.4 1.3 3.8 3.6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        </a>
+        <a href="https://www.instagram.com/sandeo_club" target="_blank" rel="noopener" data-tooltip="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></svg>
+        </a>
+        <a href="https://www.roblox.com/es/games/80903813914510/P-B" target="_blank" rel="noopener" data-tooltip="Roblox">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.7 3.3l14 3.75-3.75 14-14-3.75 3.75-14z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M11.3 8.9l3.75 1 -1 3.75 -3.75-1z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
     </div>
   </aside>
 
   <main>
 
-    <section id="inicio" class="hero">
-      <p class="eyebrow">Roblox &middot; night experience</p>
-      <h1 class="headline">
-        <span class="line">La ciudad</span>
-        <span class="line">se apaga.</span>
-        <span class="line accent"><span class="hl">Plan&nbsp;B</span> empieza.</span>
-      </h1>
-      <p class="lede">Un salón nocturno pensado al detalle: buena música, buena gente y una puerta que no todos cruzan. Sin fecha fija, siempre a tiempo.</p>
-      <a class="play-btn" href="https://www.roblox.com/es/games/80903813914510/P-B" target="_blank" rel="noopener" data-tooltip="Abrir en Roblox">
+    <div class="hero-top">
+      <a class="play-btn small" href="https://www.roblox.com/es/games/80903813914510/P-B" target="_blank" rel="noopener" data-tooltip="Abrir en Roblox">
         <span>Jugar ahora</span>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 3l16 9-16 9V3z" fill="currentColor"/></svg>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 3l16 9-16 9V3z" fill="currentColor"/></svg>
       </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
 
-      <div class="hero-visual" role="img" aria-label="Interior del club Plan B">
-        <span class="hero-visual-label">imagen / video de fondo del club</span>
+    <section id="inicio" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="rule"></span>Roblox &middot; night experience</p>
+        <h1 class="headline">
+          <span class="line">La ciudad se apaga.</span>
+          <span class="line accent">Plan&nbsp;B empieza.</span>
+        </h1>
+        <p class="lede">Un salón nocturno pensado al detalle: buena música, buena gente y una puerta que no todos cruzan. Sin fecha fija, siempre a tiempo.</p>
+        <div class="hero-actions">
+          <a class="play-btn" href="https://www.roblox.com/es/games/80903813914510/P-B" target="_blank" rel="noopener" data-tooltip="Abrir en Roblox">
+            <span>Jugar ahora</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 3l16 9-16 9V3z" fill="currentColor"/></svg>
+          </a>
+          <a class="play-btn outline" href="https://discord.gg/mpHhx4bsD3" target="_blank" rel="noopener" data-tooltip="Abrir Discord">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M4 9.5h16M8 3v3.5M16 3v3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <span>Reserva tu mesa</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <img src="assets/hero-entrance.png" alt="Entrada del club Plan B, de noche" loading="eager">
+        <div class="hero-events">
+          <p class="hero-events-title">Próximos eventos</p>
+          <div class="hero-event">
+            <span class="hero-event-name">Neon Night</span>
+            <span class="hero-event-meta">Viernes, 31 may &middot; DJ Alexx</span>
+          </div>
+          <div class="hero-event">
+            <span class="hero-event-name">Black Code</span>
+            <span class="hero-event-meta">Sábado, 01 jun &middot; DJ Prime</span>
+          </div>
+          <a class="hero-events-link" href="https://discord.gg/mpHhx4bsD3" target="_blank" rel="noopener">+ info en Discord</a>
+        </div>
+        <div class="hero-dots" aria-hidden="true"><span class="on"></span><span></span><span></span></div>
       </div>
     </section>
 
+    <section class="features">
+      <article class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l7 6-7 12-7-12 7-6z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M5 9h14M9.5 3L7 9l5 12M14.5 3L17 9l-5 12" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg></div>
+        <h3>Exclusividad</h3>
+        <p>Acceso limitado a áreas exclusivas.</p>
+        <a href="#gamepasses">Más información →</a>
+      </article>
+      <article class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 14v-3M8 16v-7M12 17v-9M16 16v-7M20 14v-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <h3>Música premium</h3>
+        <p>Los mejores DJs y un sonido de otro nivel.</p>
+        <a href="#djs">Más información →</a>
+      </article>
+      <article class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 9l4 2 4-6 4 6 4-2-1.5 9h-13L4 9z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></div>
+        <h3>Áreas VIP</h3>
+        <p>Zonas privadas con servicio premium.</p>
+        <a href="#gamepasses">Más información →</a>
+      </article>
+      <article class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M4 9.5h16M8 3v3.5M16 3v3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <h3>Eventos</h3>
+        <p>Noches únicas. Fechas que no se repiten.</p>
+        <a href="#reservas">Más información →</a>
+      </article>
+    </section>
+
     <section id="equipo" class="section">
-      <p class="eyebrow">Detrás de la puerta</p>
+      <p class="eyebrow"><span class="rule"></span>Detrás de la puerta</p>
       <h2 class="section-title">Equipo</h2>
       <p class="section-text">Las personas que sostienen Plan&nbsp;B en pie cada noche — dueños, moderadores y anfitriones.</p>
       <div class="grid-cards" id="equipoGrid">
@@ -84,7 +157,7 @@
     </section>
 
     <section id="alianzas" class="section">
-      <p class="eyebrow">Con quién compartimos la noche</p>
+      <p class="eyebrow"><span class="rule"></span>Con quién compartimos la noche</p>
       <h2 class="section-title">Alianzas</h2>
       <p class="section-text">Grupos y clanes aliados a Plan&nbsp;B.</p>
       <div class="grid-cards" id="alianzasGrid">
@@ -95,7 +168,7 @@
     </section>
 
     <section id="djs" class="section">
-      <p class="eyebrow">La cabina</p>
+      <p class="eyebrow"><span class="rule"></span>La cabina</p>
       <h2 class="section-title">DJs</h2>
       <p class="section-text">Residentes que ponen el sonido de la casa.</p>
       <div class="carousel" id="djCarousel">
@@ -107,7 +180,7 @@
     </section>
 
     <section id="gamepasses" class="section">
-      <p class="eyebrow">Acceso premium</p>
+      <p class="eyebrow"><span class="rule"></span>Acceso premium</p>
       <h2 class="section-title">Gamepasses</h2>
       <p class="section-text">Lo que se puede desbloquear dentro del club.</p>
       <div class="grid-cards" id="passGrid">
@@ -118,14 +191,31 @@
     </section>
 
     <section class="stats">
-      <div class="stat"><span class="stat-num">5K+</span><span class="stat-label">jugadores</span></div>
-      <div class="stat"><span class="stat-num">24/7</span><span class="stat-label">música</span></div>
-      <div class="stat"><span class="stat-num">100+</span><span class="stat-label">eventos</span></div>
-      <div class="stat"><span class="stat-num">VIP</span><span class="stat-label">experiencia</span></div>
+      <div class="stats-about">
+        <span class="stats-mark" aria-hidden="true">PB</span>
+        <h3>Plan B club</h3>
+        <p>Más que un club, una experiencia. Diseñado para quienes buscan algo diferente.</p>
+      </div>
+      <div class="stat">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="9" cy="8.5" r="3" stroke="currentColor" stroke-width="1.4"/><path d="M3.5 19c.6-3.4 2.8-5.3 5.5-5.3s4.9 1.9 5.5 5.3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><circle cx="16.5" cy="9.5" r="2.1" stroke="currentColor" stroke-width="1.4"/><path d="M14.8 19c.4-2.5 1.8-3.9 3.7-3.9s3.4 1.4 3.8 3.9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        <span class="stat-num">10K+</span><span class="stat-label">miembros activos</span>
+      </div>
+      <div class="stat">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M4 9.5h16M8 3v3.5M16 3v3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        <span class="stat-num">50+</span><span class="stat-label">eventos realizados</span>
+      </div>
+      <div class="stat">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8.3" stroke="currentColor" stroke-width="1.4"/><path d="M3.7 12h16.6M12 3.7c2.3 2.3 3.5 5.3 3.5 8.3s-1.2 6-3.5 8.3c-2.3-2.3-3.5-5.3-3.5-8.3s1.2-6 3.5-8.3z" stroke="currentColor" stroke-width="1.2"/></svg>
+        <span class="stat-num">24/7</span><span class="stat-label">ambiente único</span>
+      </div>
+      <div class="stat">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.9 7.6-7 9-4.1-1.4-7-4.8-7-9V6l7-3z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M9 12l2 2 4-4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="stat-num">100%</span><span class="stat-label">exclusividad</span>
+      </div>
     </section>
 
     <section id="reservas" class="section reservas-section">
-      <p class="eyebrow">Mesa VIP</p>
+      <p class="eyebrow"><span class="rule"></span>Mesa VIP</p>
       <h2 class="section-title">Reservas</h2>
       <p class="section-text">Las reservas se coordinan directo en nuestro Discord.</p>
       <a class="play-btn outline" href="https://discord.gg/mpHhx4bsD3" target="_blank" rel="noopener" data-tooltip="Abrir Discord">Reservar en Discord</a>
