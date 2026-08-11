@@ -80,3 +80,95 @@ document.addEventListener('keydown', e => {
   const blockedCombo = (e.ctrlKey || e.metaKey) && ['c', 'x', 'a', 'u', 's'].includes(e.key.toLowerCase());
   if (blockedCombo) e.preventDefault();
 });
+
+// ===== Revelado al hacer scroll (tarjetas, stats, encabezados de sección) =====
+(function scrollReveal() {
+  const REVEAL_SELECTOR = [
+    '.feature-card',
+    '.team-card',
+    '.grid-cards .card',
+    '.dj-card',
+    '.stat',
+    '.stats-about',
+    '.section .eyebrow',
+    '.section .section-title',
+    '.section .section-text'
+  ].join(', ');
+
+  const items = document.querySelectorAll(REVEAL_SELECTOR);
+  if (!items.length) return;
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Sin soporte de IntersectionObserver o con "reducir movimiento" activado:
+  // se muestra todo de inmediato, sin animación, para no dejar contenido invisible.
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    items.forEach(el => el.classList.add('in-view'));
+    return;
+  }
+
+  // Escalonado sutil por grupo de 6 elementos (para que las cuadrículas no
+  // tarden demasiado en aparecer completas), agrupado por elemento padre.
+  const counter = {};
+  items.forEach(el => {
+    const key = el.parentElement ? el.parentElement.className || 'root' : 'root';
+    counter[key] = (counter[key] || 0);
+    const delayStep = counter[key] % 6;
+    el.style.setProperty('--reveal-delay', `${delayStep * 70}ms`);
+    counter[key]++;
+  });
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+  items.forEach(el => revealObserver.observe(el));
+})();
+
+// ===== Contador animado en las estadísticas (10K+, 50+, 24/7, 100%) =====
+(function animateStats() {
+  const statNums = document.querySelectorAll('.stat-num');
+  if (!statNums.length) return;
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduceMotion || !('IntersectionObserver' in window)) return; // se deja el valor final tal cual está en el HTML
+
+  function animateCount(el) {
+    const original = el.textContent.trim();
+    const match = original.match(/^(\d+)(.*)$/); // separa el número inicial del resto (K+, %, /7...)
+    if (!match) return;
+
+    const target = parseInt(match[1], 10);
+    const suffix = match[2];
+    const duration = 1100;
+    const start = performance.now();
+
+    function tick(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3); // ease-out cúbico
+      el.textContent = Math.round(target * eased) + suffix;
+      if (progress < 1) {
+        requestAnimationFrame(tick);
+      } else {
+        el.textContent = original; // asegura el valor exacto al final
+      }
+    }
+    requestAnimationFrame(tick);
+  }
+
+  const statObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCount(entry.target);
+        statObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.4 });
+
+  statNums.forEach(el => statObserver.observe(el));
+})();
