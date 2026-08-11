@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PLAN B</title>
+<meta name="description" content="Plan B — un club nocturno de Roblox.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="noise"></div>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark" aria-hidden="true">PB</span>
+    <span class="brand-name">Plan&nbsp;B</span>
+  </div>
+  <a class="topbar-cta" href="https://www.roblox.com/es/games/80903813914510/P-B" target="_blank" rel="noopener" data-tooltip="Abrir en Roblox">Entrar al club</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="layout">
+
+  <aside class="sidenav" id="sidenav">
+    <nav aria-label="Secciones">
+      <ul>
+        <li><a href="#inicio" class="active">Inicio</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+        <li><a href="#alianzas">Alianzas</a></li>
+        <li><a href="#djs">DJs</a></li>
+        <li><a href="#gamepasses">Gamepasses</a></li>
+        <li><a href="https://discord.gg/mpHhx4bsD3" target="_blank" rel="noopener" class="nav-reservas">Reservas</a></li>
+      </ul>
+    </nav>
+
+    <div class="social" aria-label="Redes sociales">
+      <a href="https://www.roblox.com/es/games/80903813914510/P-B" target="_blank" rel="noopener" data-tooltip="Roblox">RBX</a>
+      <a href="https://discord.gg/mpHhx4bsD3" target="_blank" rel="noopener" data-tooltip="Discord">DC</a>
+      <a href="https://www.instagram.com/sandeo_club" target="_blank" rel="noopener" data-tooltip="Instagram">IG</a>
+      <a href="https://www.tiktok.com/@sandeo_roblox" target="_blank" rel="noopener" data-tooltip="TikTok">TT</a>
+    </div>
+  </aside>
+
+  <main>
+
+    <section id="inicio" class="hero">
+      <p class="eyebrow">Roblox &middot; night experience</p>
+      <h1 class="headline">La ciudad<br>se apaga.<br><span class="hl">Plan&nbsp;B</span> empieza.</h1>
+      <p class="lede">Un salón nocturno pensado al detalle: buena música, buena gente y una puerta que no todos cruzan. Sin fecha fija, siempre a tiempo.</p>
+      <a class="play-btn" href="https://www.roblox.com/es/games/80903813914510/P-B" target="_blank" rel="noopener" data-tooltip="Abrir en Roblox">
+        <span>Jugar ahora</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 3l16 9-16 9V3z" fill="currentColor"/></svg>
+      </a>
+
+      <div class="hero-visual" role="img" aria-label="Interior del club Plan B">
+        <span class="hero-visual-label">imagen / video de fondo del club</span>
+      </div>
+    </section>
+
+    <section id="equipo" class="section">
+      <p class="eyebrow">Detrás de la puerta</p>
+      <h2 class="section-title">Equipo</h2>
+      <p class="section-text">Las personas que sostienen Plan&nbsp;B en pie cada noche — dueños, moderadores y anfitriones.</p>
+      <div class="grid-cards" id="equipoGrid">
+        <article class="card person"><div class="avatar"></div><h3>Nombre</h3><p>Rol</p></article>
+        <article class="card person"><div class="avatar"></div><h3>Nombre</h3><p>Rol</p></article>
+        <article class="card person"><div class="avatar"></div><h3>Nombre</h3><p>Rol</p></article>
+      </div>
+    </section>
+
+    <section id="alianzas" class="section">
+      <p class="eyebrow">Con quién compartimos la noche</p>
+      <h2 class="section-title">Alianzas</h2>
+      <p class="section-text">Grupos y clanes aliados a Plan&nbsp;B.</p>
+      <div class="grid-cards" id="alianzasGrid">
+        <article class="card"><div class="avatar square"></div><h3>Alianza</h3></article>
+        <article class="card"><div class="avatar square"></div><h3>Alianza</h3></article>
+        <article class="card"><div class="avatar square"></div><h3>Alianza</h3></article>
+      </div>
+    </section>
+
+    <section id="djs" class="section">
+      <p class="eyebrow">La cabina</p>
+      <h2 class="section-title">DJs</h2>
+      <p class="section-text">Residentes que ponen el sonido de la casa.</p>
+      <div class="carousel" id="djCarousel">
+        <article class="dj-card"><div class="avatar round"></div><h3>DJ</h3><p>Resident</p></article>
+        <article class="dj-card"><div class="avatar round"></div><h3>DJ</h3><p>Resident</p></article>
+        <article class="dj-card"><div class="avatar round"></div><h3>DJ</h3><p>Resident</p></article>
+        <article class="dj-card"><div class="avatar round"></div><h3>DJ</h3><p>Resident</p></article>
+      </div>
+    </section>
+
+    <section id="gamepasses" class="section">
+      <p class="eyebrow">Acceso premium</p>
+      <h2 class="section-title">Gamepasses</h2>
+      <p class="section-text">Lo que se puede desbloquear dentro del club.</p>
+      <div class="grid-cards" id="passGrid">
+        <article class="card pass"><h3>Gamepass</h3><p>Descripción breve</p><span class="price">—</span></article>
+        <article class="card pass"><h3>Gamepass</h3><p>Descripción breve</p><span class="price">—</span></article>
+        <article class="card pass"><h3>Gamepass</h3><p>Descripción breve</p><span class="price">—</span></article>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stat"><span class="stat-num">5K+</span><span class="stat-label">jugadores</span></div>
+      <div class="stat"><span class="stat-num">24/7</span><span class="stat-label">música</span></div>
+      <div class="stat"><span class="stat-num">100+</span><span class="stat-label">eventos</span></div>
+      <div class="stat"><span class="stat-num">VIP</span><span class="stat-label">experiencia</span></div>
+    </section>
+
+    <section id="reservas" class="section reservas-section">
+      <p class="eyebrow">Mesa VIP</p>
+      <h2 class="section-title">Reservas</h2>
+      <p class="section-text">Las reservas se coordinan directo en nuestro Discord.</p>
+      <a class="play-btn outline" href="https://discord.gg/mpHhx4bsD3" target="_blank" rel="noopener" data-tooltip="Abrir Discord">Reservar en Discord</a>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Plan B</span>
+      <div class="social" aria-label="Redes sociales">
+        <a href="https://www.roblox.com/es/games/80903813914510/P-B" target="_blank" rel="noopener" data-tooltip="Roblox">RBX</a>
+        <a href="https://discord.gg/mpHhx4bsD3" target="_blank" rel="noopener" data-tooltip="Discord">DC</a>
+        <a href="https://www.instagram.com/sandeo_club" target="_blank" rel="noopener" data-tooltip="Instagram">IG</a>
+        <a href="https://www.tiktok.com/@sandeo_roblox" target="_blank" rel="noopener" data-tooltip="TikTok">TT</a>
+      </div>
+    </footer>
+
+  </main>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
