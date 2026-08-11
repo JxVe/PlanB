@@ -235,14 +235,8 @@ main{min-width:0}
   background:var(--line);border:1px solid var(--line);
 }
 .team-card{background:var(--panel);padding:18px;display:flex;flex-direction:column}
-.team-photo{position:relative;aspect-ratio:4/5;border-radius:2px;overflow:hidden;background:var(--panel-2);border:1px solid var(--line)}
-.team-photo img{width:100%;height:100%;object-fit:cover;display:block}
-.team-photo-mark{position:absolute;top:12px;left:12px;font-family:var(--font-display);font-weight:600;font-size:13px;color:rgba(255,255,255,.55);z-index:1}
-.team-photo .corner{position:absolute;width:14px;height:14px;border-color:rgba(255,255,255,.4)}
-.team-photo .corner.tl{top:7px;left:7px;border-top:1px solid;border-left:1px solid}
-.team-photo .corner.tr{top:7px;right:7px;border-top:1px solid;border-right:1px solid}
-.team-photo .corner.bl{bottom:7px;left:7px;border-bottom:1px solid;border-left:1px solid}
-.team-photo .corner.br{bottom:7px;right:7px;border-bottom:1px solid;border-right:1px solid}
+.team-photo{position:relative;aspect-ratio:3/5;border-radius:4px;overflow:hidden;background:var(--bg);border:1px solid var(--line);display:flex;align-items:center;justify-content:center}
+.team-photo img{width:100%;height:100%;object-fit:contain;display:block}
 
 .team-name{display:flex;align-items:center;gap:7px;font-family:var(--font-display);font-size:19px;font-weight:400;margin-top:16px}
 .team-name .verified{width:15px;height:15px;color:var(--text-dim);flex-shrink:0}
@@ -334,13 +328,8 @@ main{min-width:0}
 .feature-icon{transition:transform .35s var(--ease), border-color .35s var(--ease)}
 .feature-card:hover .feature-icon{transform:rotate(-8deg) scale(1.08);border-color:var(--text-faint)}
 
-.team-photo img{transition:transform .6s var(--ease)}
-.team-card:hover .team-photo img{transform:scale(1.06)}
-.team-photo .corner{transition:transform .35s var(--ease)}
-.team-card:hover .corner.tl{transform:translate(-3px,-3px)}
-.team-card:hover .corner.tr{transform:translate(3px,-3px)}
-.team-card:hover .corner.bl{transform:translate(-3px,3px)}
-.team-card:hover .corner.br{transform:translate(3px,3px)}
+.team-photo img{transition:transform .5s var(--ease)}
+.team-card:hover .team-photo img{transform:scale(1.035)}
 
 .dj-card .avatar.round{transition:transform .35s var(--ease)}
 .dj-card:hover .avatar.round{transform:scale(1.08)}
