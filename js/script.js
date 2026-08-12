@@ -86,6 +86,7 @@ document.addEventListener('keydown', e => {
   const REVEAL_SELECTOR = [
     '.feature-card',
     '.team-card',
+    '.clan-card',
     '.grid-cards .card',
     '.dj-card',
     '.stat',
