@@ -229,6 +229,42 @@ main{min-width:0}
 .dj-card h3{font-family:var(--font-body);font-weight:500;font-size:14px;margin-top:14px}
 .dj-card p{color:var(--text-faint);font-size:11px;font-family:var(--font-mono);letter-spacing:.05em;text-transform:uppercase;margin-top:4px}
 
+/* ===== Clan / alliance cards ===== */
+.clans-grid{
+  display:grid;grid-template-columns:repeat(5, 1fr);gap:14px;
+}
+.clan-card{
+  position:relative;overflow:hidden;
+  background:var(--panel);border:1px solid var(--line);border-radius:4px;
+  padding:20px 14px 18px;text-align:center;
+}
+.clan-card::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    repeating-linear-gradient(115deg, rgba(255,255,255,.025) 0 2px, transparent 2px 42px),
+    repeating-linear-gradient(25deg, rgba(255,255,255,.018) 0 1px, transparent 1px 30px);
+}
+.clan-card::after{
+  content:"";position:absolute;left:50%;top:44%;width:130px;height:130px;
+  background:radial-gradient(circle, var(--c) 0%, transparent 70%);
+  opacity:.16;transform:translate(-50%,-50%);filter:blur(4px);pointer-events:none;
+}
+.clan-tag{position:relative;z-index:1;display:block;font-family:var(--font-mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-faint)}
+.clan-emblem{position:relative;z-index:1;width:64px;height:64px;margin:14px auto 10px;display:flex;align-items:center;justify-content:center}
+.clan-emblem img{max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 0 10px var(--c))}
+.clan-name{
+  position:relative;z-index:1;
+  font-family:var(--font-body);font-weight:600;font-size:14px;letter-spacing:.03em;text-transform:uppercase;
+  color:var(--c);
+}
+.clan-members{
+  position:relative;z-index:1;display:flex;align-items:center;justify-content:center;gap:5px;
+  margin-top:12px;padding-top:12px;border-top:1px solid var(--line);
+  font-family:var(--font-mono);font-size:10px;letter-spacing:.03em;text-transform:uppercase;color:var(--text-faint);
+}
+.clan-members svg{width:13px;height:13px;flex-shrink:0}
+.clan-apply{margin-top:32px;display:inline-flex}
+
 /* ===== Team cards ===== */
 .team-grid{
   display:grid;grid-template-columns:repeat(auto-fill, minmax(240px,1fr));gap:1px;
@@ -284,6 +320,7 @@ main{min-width:0}
 /* --- Revelado al hacer scroll --- */
 .feature-card,
 .team-card,
+.clan-card,
 .grid-cards .card,
 .dj-card,
 .stat,
@@ -296,6 +333,7 @@ main{min-width:0}
 }
 .feature-card,
 .team-card,
+.clan-card,
 .grid-cards .card,
 .dj-card{
   transition-property:opacity, translate, transform, box-shadow, border-color;
@@ -319,6 +357,7 @@ main{min-width:0}
 /* --- Hover: tarjetas --- */
 .feature-card:hover,
 .team-card:hover,
+.clan-card:hover,
 .grid-cards .card:hover,
 .dj-card:hover{
   transform:translateY(-6px);
@@ -373,6 +412,7 @@ main{min-width:0}
   .hero{min-height:520px}
   .hero-copy{padding:48px 0}
   .features{grid-template-columns:repeat(2,1fr)}
+  .clans-grid{grid-template-columns:repeat(3,1fr)}
   .stats{grid-template-columns:1fr 1fr}
   .stats-about{grid-column:1 / -1;border-right:none;border-bottom:1px solid var(--line)}
   .stat:nth-child(3){border-right:1px solid var(--line)}
@@ -402,6 +442,7 @@ main{min-width:0}
 
 @media (max-width: 560px){
   .features{grid-template-columns:1fr}
+  .clans-grid{grid-template-columns:repeat(2,1fr)}
 }
 
 /* ===== Reduced motion ===== */
